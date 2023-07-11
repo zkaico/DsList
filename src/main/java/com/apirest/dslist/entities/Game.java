@@ -22,13 +22,12 @@ public class Game {
 	private String platforms;
 	private Double score;
 	private String imgUrl;
-	
 	@Column(columnDefinition ="TEXT")
 	private String shortDescription;
-	
 	@Column(columnDefinition ="TEXT")
 	private String longDescription;
-	
+	public Game() {
+}
 public Game(long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
 		String shortDescription, String longDescription) {
 	this.id = id;
@@ -90,12 +89,12 @@ public void setScore(Double score) {
 	this.score = score;
 }
 
-public String getIgmUrl() {
+public String getImgUrl() {
 	return imgUrl;
 }
 
-public void setIgmUrl(String igmUrl) {
-	this.imgUrl = igmUrl;
+public void setImgUrl(String imgUrl) {
+	this.imgUrl = imgUrl;
 }
 
 public String getShortDescription() {
