@@ -19,21 +19,25 @@ public class Game {
 	@Column(name = "game_year")
 	private Integer year;
 	private String genre;
-	private String platform;
+	private String platforms;
 	private Double score;
-	private String igmUrl;
+	private String imgUrl;
+	
+	@Column(columnDefinition ="TEXT")
 	private String shortDescription;
+	
+	@Column(columnDefinition ="TEXT")
 	private String longDescription;
 	
-public Game(long id, String title, Integer year, String genre, String platform, Double score, String igmUrl,
+public Game(long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
 		String shortDescription, String longDescription) {
 	this.id = id;
 	this.title = title;
 	this.year = year;
 	this.genre = genre;
-	this.platform = platform;
+	this.platforms = platforms;
 	this.score = score;
-	this.igmUrl = igmUrl;
+	this.imgUrl = imgUrl;
 	this.shortDescription = shortDescription;
 	this.longDescription = longDescription;
 	}
@@ -71,11 +75,11 @@ public void setGenre(String genre) {
 }
 
 public String getPlatform() {
-	return platform;
+	return platforms;
 }
 
 public void setPlatform(String platform) {
-	this.platform = platform;
+	this.platforms = platform;
 }
 
 public Double getScore() {
@@ -87,11 +91,11 @@ public void setScore(Double score) {
 }
 
 public String getIgmUrl() {
-	return igmUrl;
+	return imgUrl;
 }
 
 public void setIgmUrl(String igmUrl) {
-	this.igmUrl = igmUrl;
+	this.imgUrl = igmUrl;
 }
 
 public String getShortDescription() {
